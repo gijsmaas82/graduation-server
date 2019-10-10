@@ -5,7 +5,7 @@ const User = require('../User/model')
 const Drawing = db.define(
   'drawing',
   {
-    URL: Sequelize.STRING,
+    URL: Sequelize.BLOB,
   }
 )
 

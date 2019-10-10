@@ -9,7 +9,7 @@ const router = new Router()
 async function newDrawing (req, res) {
   const drawing = {
     URL: req.body.URL,
-    // userId: req.user.id
+    userId: req.user.id
   }
 
   const newDrawing = await Drawing.create(drawing)
@@ -17,6 +17,6 @@ async function newDrawing (req, res) {
   return res.send(newDrawing)
 }
 
-router.post('/drawing', newDrawing)
+router.post('/drawing', auth, newDrawing)
 
 module.exports = router

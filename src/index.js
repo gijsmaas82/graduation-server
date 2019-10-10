@@ -8,7 +8,7 @@ const drawingRouter = require('./Drawings/router')
 const app = express()
 app.use(
   cors(),
-  bodyParser.json(),
+  bodyParser.json({ limit: '50mb' }),
   userRouter,
   drawingRouter,
   login
