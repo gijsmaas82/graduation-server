@@ -12,9 +12,9 @@ async function newDrawing (req, res) {
     // userId: req.user.id
   }
 
-  const registeredUser = await Drawing.create(drawing)
+  const newDrawing = await Drawing.create(drawing)
 
-  return res.send(registeredUser)
+  return res.send(newDrawing)
 }
 
 router.post('/drawing', newDrawing)
